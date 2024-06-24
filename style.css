@@ -174,12 +174,17 @@ a {
 }
 
 .code__info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: #e4e5ea;
   border-radius: 20px;
   margin-top: 30px;
+}
+
+.container__details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .details {
   color: black;
@@ -222,10 +227,15 @@ a {
   cursor: pointer;
 }
 
-.exemple {
+.exemple p {
+  color: black;
+  border-top: 1px black;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
+  padding-top: 20px;
+  margin-top: 10px;
   transition: transorm 1s;
 }
-/* .hidden {
+.hidden {
   display: none;
   transform: translateY(-4rem);
-} */
+}
