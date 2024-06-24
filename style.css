@@ -53,6 +53,7 @@ a {
   font-weight: 700;
   font-size: 3rem;
   margin-left: 40px;
+  transition: 0.3s;
 }
 .nav__links {
   display: flex;
