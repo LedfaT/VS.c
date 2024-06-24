@@ -146,10 +146,6 @@ a {
   text-align: center;
 }
 
-.hidden {
-  display: none;
-}
-
 .eclipse--1 {
   position: absolute;
   height: 400px;
@@ -225,3 +221,11 @@ a {
   padding-right: 12px;
   cursor: pointer;
 }
+
+.exemple {
+  transition: transorm 1s;
+}
+/* .hidden {
+  display: none;
+  transform: translateY(-4rem);
+} */
