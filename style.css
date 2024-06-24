@@ -233,7 +233,7 @@ a {
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
   padding-top: 20px;
   margin-top: 10px;
-  transition: transorm 1s;
+  transition: transform 1s;
 }
 .hidden {
   display: none;
