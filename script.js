@@ -6,8 +6,14 @@ btnsOpen.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
     const targ = e.target;
     const data = e.target.closest(".code__info").dataset.ex;
-    document.querySelector(`.exemple--${data}`).classList.remove("hidden");
-    targ.style.transform = "rotate(180deg)";
+    const exemple = document.querySelector(`.exemple--${data}`);
+    if (exemple.classList.contains("hidden")) {
+      exemple.classList.remove("hidden");
+      targ.style.transform = "rotate(180deg)";
+    } else {
+      exemple.classList.add("hidden");
+      targ.style.transform = "rotate(360deg)";
+    }
   });
 });
 
