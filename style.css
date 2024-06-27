@@ -106,16 +106,13 @@ a {
   line-height: 65px;
   padding: 20px 0;
   display: flex;
-  align-content: center;
-  justify-content: center;
 
   align-items: start;
-  justify-items: start;
 }
 
 .header__description {
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 24px;
   padding-bottom: 28px;
   display: flex;
@@ -137,41 +134,51 @@ a {
   font-weight: 700;
   font-size: 3rem;
   line-height: 65px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 .section__description {
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 24px;
   text-align: center;
+  padding: 10px 0;
+}
+
+.li__description {
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--color-secondary);
+  content: "•";
+  padding: 0 0 2px 3px;
+  font-size: 1.3rem;
 }
 
 .eclipse--1 {
   position: absolute;
   height: 400px;
   right: 2px;
-  top: 45rem;
+  top: 40rem;
 }
 .eclipse--2 {
   position: absolute;
   height: 400px;
   transform: rotate(180deg);
-  top: 55rem;
+  top: 67rem;
 }
 
 .eclipse--3 {
   position: absolute;
   height: 500px;
   right: 2px;
-  top: 232rem;
+  top: 198rem;
 }
 .eclipse--4 {
   position: absolute;
   height: 500px;
   transform: rotate(180deg);
   left: 1px;
-  top: 235rem;
+  top: 200rem;
 }
 
 .code__info {
@@ -186,6 +193,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40rem;
 }
 .details {
   color: black;
@@ -213,7 +221,7 @@ a {
   line-height: 30px;
 }
 
-.contacts {
+#contacts {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -226,18 +234,25 @@ a {
   height: 45px;
   padding-right: 12px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 
-.exemple p {
+.exemple {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid black;
   color: black;
-  border-top: 1px black;
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
-  border-width: 100px;
-  padding-top: 20px;
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  padding-bottom: 10px;
   margin-top: 10px;
-  transition: opacity 0.6s, height 0.6s;
+  transition: all 1s;
 }
-.hidden {
-  display: none;
+.exemple.hidden {
+  transform: translateY(-10rem);
+  height: 0;
+  padding: 0;
+  margin-bottom: 0;
+  opacity: 0;
 }

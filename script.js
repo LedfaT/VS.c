@@ -6,13 +6,13 @@ btnsOpen.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
     const targ = e.target;
     const data = e.target.closest(".code__info").dataset.ex;
-    const exemple = document.querySelector(`.exemple--${data}`);
+    const exemple = e.target.closest(".code__info").querySelector(".exemple");
     if (exemple.classList.contains("hidden")) {
       exemple.classList.remove("hidden");
-      targ.style.transform = "rotate(180deg)";
+      targ.style.transform = "rotate(0.5turn)";
     } else {
       exemple.classList.add("hidden");
-      targ.style.transform = "rotate(360deg)";
+      targ.style.transform = "rotate(1turn)";
     }
   });
 });
@@ -31,3 +31,15 @@ const HandleHover = function (e, opacity) {
 
 nav.addEventListener("mouseover", HandleHover.bind(0.5));
 nav.addEventListener("mouseout", HandleHover.bind(1));
+
+document.querySelector(".nav__links").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  console.log(e);
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+});
